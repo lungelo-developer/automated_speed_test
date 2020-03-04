@@ -13,9 +13,9 @@ def runny():
     driver.get('http://fast.com/')
     time.sleep(10)
    
-    filename = (strftime("%Y-%m-%d %H%M%S", gmtime()))
+    datetime = (strftime("%Y-%m-%d %H:%M:%S", gmtime()))
     element=driver.find_element_by_id('speed-value')
-    print(element.text, filename)
+    print(element.text, datetime)
     speed=[]
     speed.append(element.text)
     
@@ -26,7 +26,7 @@ def runny():
             file_object.write("\n")
         file_object.write(speed[0])
         file_object.write(',')
-        file_object.write(filename)
+        file_object.write(datetime)
 
     driver.close()
 
