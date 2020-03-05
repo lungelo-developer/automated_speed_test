@@ -3,9 +3,12 @@ from time import gmtime, strftime
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.common.keys import Keys
-from bs4 import BeautifulSoup
-import pandas as pd
+import os.path
 
+save_path = 'C:/'
+file_name = 'hourly_speed.csv'
+
+complete_path = os.path.join(save_path, file_name)
 def runny():
     driver=webdriver.Chrome()
     driver.get('http://fast.com/')
