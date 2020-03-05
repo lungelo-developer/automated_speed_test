@@ -20,7 +20,7 @@ def runny():
     speed=[]
     speed.append(element.text)
     
-    with open("hourly_speed.csv", "a+") as file_object:
+    with open(complete_path, "a+") as file_object:
         file_object.seek(0)
         data = file_object.read(100)
         if len(data) > 0 :
