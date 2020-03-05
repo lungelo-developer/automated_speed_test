@@ -4,8 +4,15 @@ from time import gmtime, strftime
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.common.keys import Keys
+<<<<<<< HEAD
 import csv
+=======
+>>>>>>> a176876c7adedce908d650a1f35d52359ab31649
 
+save_path = 'C:/'
+file_name = 'hourly_speed.csv'
+
+complete_path = os.path.join(save_path, file_name)
 def runny():
     driver=webdriver.Chrome()
     driver.get('http://fast.com/')
@@ -17,7 +24,7 @@ def runny():
     speed=[]
     speed.append(element.text)
     
-    with open("hourly_speed.csv", "a+") as file_object:
+    with open(complete_path, "a+") as file_object:
         file_object.seek(0)
         data = file_object.read(100)
         if len(data) > 0 :
