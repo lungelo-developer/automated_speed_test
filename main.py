@@ -4,14 +4,12 @@ from time import gmtime, strftime
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 from selenium.webdriver.common.keys import Keys
-from bs4 import BeautifulSoup
-import pandas as pd
 import csv
 
 def runny():
     driver=webdriver.Chrome()
     driver.get('http://fast.com/')
-    time.sleep(10)
+    time.sleep(20)
    
     datetime = (strftime("%Y-%m-%d %H:%M:%S", gmtime()))
     element=driver.find_element_by_id('speed-value')
